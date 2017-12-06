@@ -11,7 +11,7 @@ export default {
     computed: {
         style() {
             return "background: " +
-                   this.prim.color +
+                   this.prim.color.color +
                    "; top: " +
                    this.prim.top +
                    "%; left: " +
@@ -24,7 +24,8 @@ export default {
                    this.prim.scale +
                    ") rotate(" +
                    this.prim.rotation +
-                   "deg)";
+                   "deg); box-shadow: 4px 4px 8px " +
+                   this.prim.shadowColor.color;
         }
     },
 }
@@ -32,7 +33,6 @@ export default {
 
 <style scoped>
 div {
-    box-shadow: 4px 4px 8px black;
     position: absolute;
 }
 </style>

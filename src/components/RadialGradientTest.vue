@@ -8,6 +8,7 @@
 
 <script>
 import RadialGradient from './RadialGradient.vue'
+import Color from '../js/color.js'
 
 export default {
   props: [
@@ -26,27 +27,6 @@ export default {
     var self = this;
     var r = 0;
 
-    function randomInt(min, max)
-    {
-        return Math.round(random(min, max));
-    }
-
-    function random(min, max)
-    {
-        return (Math.random() * (max - min)) + min;
-    }
-
-    function randomColor()
-    {
-        var min = 32;
-        var max = 256 - 32;
-
-       return "#"
-           + randomInt(min, max).toString(16)
-           + randomInt(min, max).toString(16)
-           + randomInt(min, max).toString(16);
-    }
-
     var xc = this.params.complexity;
     var yc = this.params.complexity;
     var scale = this.params.scale;
@@ -63,7 +43,8 @@ export default {
           height: h,
           scale: scale,
           rotation: 0,
-          color: randomColor()
+          color1: new Color(),
+          color2: new Color(),
         });
       }
     }
@@ -73,6 +54,8 @@ export default {
       for (var i=0 ; i < self.prims.length ; ++i) {
         var prim = self.prims[i];
         prim.rotation = i + r;
+        prim.color1.next();
+        prim.color2.next();
       }
 
       r += 2;

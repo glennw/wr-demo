@@ -11,7 +11,7 @@ export default {
     computed: {
         style() {
             return "background-color: " +
-                   this.rect.color +
+                   this.rect.color.color +
                    "; top: " +
                    this.rect.top +
                    "%; left: " +

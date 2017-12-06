@@ -11,7 +11,11 @@ export default {
     computed: {
         style() {
             return "background: " +
-                   "linear-gradient(red, green)" +
+                   "linear-gradient(" +
+                   this.prim.color1.color +
+                   ", " +
+                   this.prim.color2.color +
+                   ")" +
                    "; top: " +
                    this.prim.top +
                    "%; left: " +
