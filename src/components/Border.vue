@@ -11,7 +11,7 @@ export default {
     computed: {
         style() {
             return "background: " +
-                   this.prim.color +
+                   this.prim.color.color +
                    "; top: " +
                    this.prim.top +
                    "%; left: " +

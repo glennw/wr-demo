@@ -6,24 +6,24 @@
 <script>
 export default {
     props: [
-        'rect',
+        'prim',
     ],
     computed: {
         style() {
             return "background-color: " +
-                   this.rect.color.color +
+                   this.prim.color.color +
                    "; top: " +
-                   this.rect.top +
+                   this.prim.top +
                    "%; left: " +
-                   this.rect.left +
+                   this.prim.left +
                    "%; width: " +
-                   this.rect.width +
+                   this.prim.width +
                    "%; height: " +
-                   this.rect.height +
+                   this.prim.height +
                    "%; transform: scale(" +
-                   this.rect.scale +
+                   this.prim.scale +
                    ") rotate(" +
-                   this.rect.rotation +
+                   this.prim.rotation +
                    "deg)";
         }
     },

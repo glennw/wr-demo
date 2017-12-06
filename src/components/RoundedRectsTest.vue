@@ -1,7 +1,7 @@
 <template>
   <div>
-    <template v-for="rect in rects">
-      <RoundedRect :rect=rect></RoundedRect>
+    <template v-for="prim in prims">
+      <RoundedRect :prim=prim></RoundedRect>
     </template>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   },
   data () {
     return {
-      rects: [
+      prims: [
       ]
     };
   },
@@ -36,7 +36,7 @@ export default {
 
     for (var y=0 ; y < yc ; ++y) {
       for (var x=0 ; x < xc ; ++x) {
-        self.rects.push({
+        self.prims.push({
           top: x * w,
           left: y * h,
           width: w,
@@ -50,10 +50,10 @@ export default {
 
     var tick = function() {
 
-      for (var i=0 ; i < self.rects.length ; ++i) {
-        var rect = self.rects[i];
-        rect.rotation = i + r;
-        rect.color.next();
+      for (var i=0 ; i < self.prims.length ; ++i) {
+        var prim = self.prims[i];
+        prim.rotation = i + r;
+        prim.color.next();
       }
 
       r += 2;

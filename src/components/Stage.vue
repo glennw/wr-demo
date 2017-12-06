@@ -4,6 +4,7 @@
     <RadialGradientTest v-else-if="params.test == 'RadialGradient'" :params=params></RadialGradientTest>
     <BorderTest v-else-if="params.test == 'Border'" :params=params></BorderTest>
     <BoxShadowTest v-else-if="params.test == 'BoxShadow'" :params=params></BoxShadowTest>
+    <MixedTest v-else-if="params.test == 'Mixed'" :params=params></MixedTest>
 </template>
 
 <script>
@@ -12,6 +13,7 @@ import GradientTest from './GradientTest.vue'
 import RadialGradientTest from './RadialGradientTest.vue'
 import BorderTest from './BorderTest.vue'
 import BoxShadowTest from './BoxShadowTest.vue'
+import MixedTest from './MixedTest.vue'
 
 export default {
     data () {
@@ -32,6 +34,7 @@ export default {
         RadialGradientTest,
         BorderTest,
         BoxShadowTest,
+        MixedTest,
     },
 }
 </script>
